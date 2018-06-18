@@ -1,0 +1,163 @@
+.skills{
+  text-align: center;
+  height: 250px;
+  width: 80%;
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom: 0;
+  margin: auto;
+
+  ul{
+    li{
+      a{
+        position: relative;
+        display: block;
+        min-height: 250px;
+        text-align: center;
+        img{
+          height: 180px;
+        }
+        h2{
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+
+          font-family: LucidaGrande;
+        	font-size: 14px;
+          line-height: 70px;
+        	letter-spacing: 3.5px;
+        	text-align: center;
+        	color: #f5a623;
+          text-align: center;
+          text-transform: uppercase;
+        }
+
+        &:hover{
+          h2{
+            display: none;
+          }
+        }
+
+
+        &.rotate{
+          img{
+            transform: rotate(0deg) scale(1);
+            -webkit-transform: rotate(0deg) scale(1);
+            -moz-transform: rotate(0deg) scale(1);
+            -o-transform: rotate(0deg) scale(1);
+            -ms-transform: rotate(0deg) scale(1);
+            transition: transform 0.25s ease-out;
+            -webkit-transition: transform 0.25s ease-out;
+            -moz-transition: transform 0.25s ease-out;
+            -o-transition: transform 0.25s ease-out;
+            -ms-transition: transform 0.25s ease-out;
+          }
+
+          &:hover{
+            img{
+              transform: rotate(30deg) scale(1.2);
+              -webkit-transform: rotate(30deg) scale(1.2);
+              -moz-transform: rotate(30deg) scale(1.2);
+              -o-transform: rotate(30deg) scale(1.2);
+              -ms-transform: rotate(30deg) scale(1.2);
+            }
+
+          }
+        }
+
+        &.pump{
+
+          &:hover{
+            img{
+              animation-name: pump;
+              animation-duration: 0.5s;
+              animation-iteration-count: infinite;
+              animation-timing-function: ease-in-out;
+            }
+          }
+
+
+
+        }
+
+        &.hand{
+          img{
+            position: absolute;
+            left:0;
+            right: 0;
+            margin: auto;
+          }
+          .hand-hover{
+            opacity: 0;
+            transition: opacity  0.5s ease-in;
+            -webkit-transition: opacity  0.5s ease-in;
+            -moz-transition: opacity  0.5s ease-in;
+            -o-transition: opacity  0.5s ease-in;
+            -ms-transition: opacity  0.5s ease-in;
+
+          }
+          .hand-open{
+            position: absolute;
+            opacity: 1;
+            transition: opacity 0.5s ease-in;
+            -webkit-transition: opacity 0.5s ease-in;
+            -moz-transition: opacity  0.5s ease-in;
+            -o-transition: opacity 0.5s ease-in;
+            -ms-transition: opacity 0.5s ease-in;
+          }
+          .hand-hover, .hand-open{
+            transform: scale(1);
+            -webkit-transform: scale(1);
+            -moz-transform: scale(1);
+            -o-transform: scale(1);
+            -ms-transform: scale(1);
+
+          }
+          &:hover{
+            .hand-open{
+              position: absolute;
+              opacity: 0;
+            }
+            .hand-hover{
+              opacity: 1;
+              position: relative;
+
+              transform: scale(1.2);
+              -webkit-transform: scale(1.2);
+              -moz-transform: scale(1.2);
+              -o-transform: scale(1.2);
+              -ms-transform: scale(1.2);
+            }
+          }
+        }
+
+      }
+    }
+  }
+}
+
+@keyframes pump {
+  0%{
+      transform: scale(1) rotate(0deg);
+      -webkit-transform: scale(1) rotate(0deg);
+      -moz-transform: scale(1) rotate(0deg);
+      -o-transform: scale(1) rotate(0deg);
+      -ms-transform: scale(1) rotate(0deg);
+  }
+  50%{
+      transform: scale(1.2) rotate(5deg);
+      -webkit-transform: scale(1.2) rotate(5deg);
+      -moz-transform: scale(1.2) rotate(5deg);
+      -o-transform: scale(1.2) rotate(5deg);
+      -ms-transform: scale(1.2) rotate(5deg);
+  }
+  100%{
+      transform: scale(1) rotate(0deg);
+      -webkit-transform: scale(1) rotate(0deg);
+      -moz-transform: scale(1) rotate(0deg);
+      -o-transform: scale(1) rotate(0deg);
+      -ms-transform: scale(1) rotate(0deg);
+  }
+}
